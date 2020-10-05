@@ -1,0 +1,58 @@
+Comodidad: insertar consultar eliminar modificar--
+HC: Insertar consultar eliminar -- Probar
+Paquete: Consultar (general) eliminar insertar  modificaar --
+Paquete por hotel: Consultar eliminar (falta insertar)--
+Servicio: consultar(general) eliminar (falta insertar y modificar)--
+Servicio por hotel: Consultar eliminar (falta insertar)--
+Limpieza Piscina: Insertar Consultar (por hotel)  //Probar el formato de CURDATE()-7, falta restar productos
+Amonestaciones automaticas:
+Reserva: consultar eliminar 
+- Al insertar verificar y restar disponibilidad (crear metodo que revise los plazos de las compras, si finalizaron sumar 1 al cupo en HP)
+- Estas reservas tienen una duración máxima de 1 día (para confirmar), si pasa este tiempo y el cliente no formaliza la compra, liberamos los cupos
+- Las compras puede ser pagada en varias partes, cuando provienen de una reserva, la primera se realiza al confirmar ésta. En cualquiera de los casos, el 1er pago de una compra no puede ser menor al 50% del monto total. (condicion en insertar Pago, si count == 1 con ese codigo, aplicar 50%)
+Paquete_Reserva: en el insertar, copiar costo de HP de la tabla
+Servicio_Reserva: en el insertar copiar costo de Hotel_Servicio de la tabla
+Compra: consultar eliminar  insertar, modificar --
+Pagos Compra: creo que essta listo --
+Cancelar Compra: (reestablecer los cupos de compra o reserva seleccionado)
+Emitir factura compra:
+Estadisticas:
+
+NOTAS LEER:
+Preguntas:
+Insert de agregarCompra
+Update In 2 campos, o concat
+Cancelar compra es la condicion de 1 dia de reserva? o es cancelacion voluntaria
+ Hotel Servicio Piscina y servicio descripcion como se agregan piscinas
+ Limpieza piscina horario y amonestacion auto.
+
+Para liberar los cupos se dan los casos:
+Si ha pasado 1 dia de la reserva y no se compra, se busca con el codigoR en PaqueteReserva se obtienen codigoH y codigoP y se hace update de HP con ellos
+Si las fechas finalez de las compras ya pasaron, se busca el codigoC en paqueteCompra se obtienen codigoH y codigoP y se hace update de HP con ellos
+
+Reserva:
+1. Seleccionar datos generales (Insertar REserva) --
+2. Seleccionar habitaciones (Insertar HR) --
+3. Seleccionar Paquetes (Insertar Paquete_Reserva) --
+4. Seleccionar Servicios (Insertar Servicio_Reserva) --
+5. Seleccionar Acompañantes (Insertar RA ) --
+6. Llamar calcular MontototalReserva --
+7. Descontar Cupos de hab, paquete, reserva	(Descontar Cupos)
+
+Compra:
+1. Seleccione si tiene reserva 
+2. Si tiene reserva, copiar de la tabla al insert (insert Compra) y ejecutar AgregarCompra (pendiente) y terminar aqui, sino Seleccionar datos generales (insert Compra)
+3. Seleccionar Habitaciones (Insertar CH)--
+4. Seleccionar Paquetes (Insertar Paquete_Compra)
+5.Seleccionar Servicios (Insertar Servicio_Compra)
+6. Seleccionar Acompañantes (Insertar CA) --
+7. Llamar calcular montoTotalCompra --
+8. Si no viene de reserva, descontar cupos (descontar cupos) (usar var en interfaz para saber si )
+
+Regla de negocio habitaciones de max 5 personas.
+Regla de negocio solo se puede abonar un pago al dia para compra
+Regla del negocio, paquetes por uso familiar, es decir 1 cupo toma en cuenta una familia
+agregar modificar Hotel_Servicio(costo)+-
+Hay que realizar metodo para Verificar si ha pasado 1 dia para todas las reservass no disponibles
+Hay que realizar un metodo para verificar las fechas finales de las compras
+

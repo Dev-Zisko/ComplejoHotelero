@@ -1,0 +1,25 @@
+Consultas por consultarGeneral:
+Comodidades
+TrabajoLimpieza
+Servicio
+Paquete
+
+a. CRUD comodidades: ya esta hecho, arreglar costo en habitacion (no recuerdo si era ahi, pedir alberto correccion)
+b. CRUD comodidades por habitacion: hay que arreglar preferiblemente que se elijan al crear habitaciones , pero ponlo como creas segun lo que nos dijo susana. cualquier cosa me avisas y pensamos en algo
+c. CRUD paquetes: Se solicita codigo ( autoincremento, no se pide), nombre y descripcion
+d. CRUD paquetes por hotel: Se debe hacer algo similar a lo de comodidades y habitaciones, probable justo despues de crear que elija donde los va asignar.
+e. CRUD Servicios: se pide codigo (autoincremento, no se pide), descripcion, equipo especial (boolean) y tarifa
+f. CRUD servicios por hotel : similar a lo anterior de comodidades, se pide el costo y el tipo del servicio (se me ocurre un combobox porque el unico que tenemos es piscina, pero asumo podemos poner mas que no necesariamente sean subclases como cancha tenis, bar, etc etc etc, necesito feedback de esto entre los 3)
+g. CRUD limpieza piscina: se necesita saber que piscina se limpiara (esto es de la tabla hotel servicio), quien la limpio (piscinero) y la fecha.
+h. Creación automática de las Amonestaciones a los Piscineros
+i. CRUD reservas: el codigo (autoincremento, no se pide), el cliente que reserva (año ingreso, consecutivo), fecha de reserva (supongo la actual), fecha de inicio , fecha final, el monto total de la reserva (no se si es la suma de costo de habitacion y costo de servicio y paquete), tambien va un status pero no se pide, para comprobar si la reserva se cancela o no.
+j. CRUD compra: 2 opciones, si hay reserva, simplemente seleccionar la reserva, sino, pedir todo lo de reserva.
+k. Registrar Pagos y/o abonos a la compras : Creo que hace falta un multievaluado para los pagos, porque se puede pagar en varias partes, hay que preguntar. (se aceptan opiniones, comentarios, sugerencias, insultos etc)
+l. Cancelar Compra (no se si es cancelar de pago o cancelar de cancelar)
+m. Emision factura de compra (esto se puede hacer con pdf pero depende del pago de las compras)
+n. Estadisticas:
+	tipo hab mas y mens usadas
+	clientes frecuentes
+	hoteles mas/menos reservados
+	Servicios mas/menos reservados
+	Paquetes mas/menos reservados.

@@ -1,0 +1,27 @@
+a)	Informe		
+b)	Interface de Navegación  (contiene todas las funcionalidades que tendrá el sistema) 		
+c)	Scrip de eliminación de los Objetos de la BD --		
+d)	Scrip de creación de las tablas  		--
+e)	Scrip de creación de los constraint de la BD --	
+f)	Scrip de inserción de los datos.		--
+g)	CRUD Lugar 		(falta eliminar, consultar)
+h)	CRUD Hoteles	(falta eliminar, consultar)	
+i)	CRUD Personal 	(falta eliminar y consultar) 
+j)	CRUD Compañías  de limpieza	(Falta eliminar y consultar) 	
+k)	CRUD Trabajos  de limpieza	(Falta eliminar y consultar)	
+l)	CRUD Trabajos limpieza por compañías (Falta eliminar y consultar)		
+m)	CRUD Factura de trabajos   limpieza	 ( se hizo Insertar y Modificar)
+n)	Pago Factura de trabajos limpieza --		
+o)	CRUD Productos 	( se hizo Insertar y Modificar)
+p)	CRUD Proveedores (Falta eliminar y consultar) 	
+q)	CRUD de la lista de Productos y los Proveedores que lo ofrecen por Hotel (Solo se hizo insertar) (VerificarTablas de consulta)	
+r)	Registro de inventario físico por producto	(Reporte)	--
+s)	Comparación entre inventario físico e inventario teórico por producto.	(cuando se limpie piscina o se agregue o modifique producto, verificar fisivo vs inventario y si se necesita crear ajuste además comparar con minimo, si baja, pedir que se realice orden de compra).	
+t)	CRUD Ajustes de Inventario	(Se hizo Insertar y Modificar)	
+u)	CRUD Orden de compra de productos	( se hizo Insertar y Modificar)	
+v)	Pago Orden de compra --
+w)	CRUD Clientes (incluye acompañantes) (Insertar y Modificar, tener en cuenta dependiendo del consecutivo).		
+
+AUTO
+orden compra, habitacion,  compra,  
+
